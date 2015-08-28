@@ -7,17 +7,15 @@ machine:
   java:
     version:
       oraclejdk8
-general:
-  build_dir: engine
 
 ## Customize dependencies
 dependencies:
   pre:
     - git clone git@bitbucket.org:hotcario/engine.git
   override:
-    - mvn validate
+    - mvn --file engine validate
 
 ## Customize test commands
 test:
   override:
-    - mvn test
+    - mvn --file engine test
