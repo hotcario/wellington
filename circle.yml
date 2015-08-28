@@ -1,6 +1,5 @@
 ## Customize the test machine
 machine:
-
   timezone:
     Europe/Prague # Set the timezone
 
@@ -8,11 +7,13 @@ machine:
   java:
     version:
       oraclejdk8
+general:
+  build_dir: engine
 
 ## Customize dependencies
 dependencies:
   pre:
-    - git clone https://@bitbucket.org/hotcario/engine.git
+    - git clone git@bitbucket.org:hotcario/engine.git
   override:
     - mvn validate
 
