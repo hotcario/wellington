@@ -15,7 +15,7 @@ general:
 ## Customize dependencies
 dependencies:
   pre:
-    - git clone https://@bitbucket.org/hotcario/engine.git engine
+    - git clone https://@bitbucket.org/hotcario/engine.git
   override:
     - mvn validate
 
