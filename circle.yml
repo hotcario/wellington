@@ -11,6 +11,8 @@ machine:
 
 ## Customize dependencies
 dependencies:
+  pre:
+    - git clone git@bitbucket.org:hotcario/engine.git
   override:
     - mvn validate
 
