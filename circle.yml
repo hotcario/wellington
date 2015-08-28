@@ -9,10 +9,13 @@ machine:
     version:
       oraclejdk8
 
+general:
+  build_dir: engine
+
 ## Customize dependencies
 dependencies:
   pre:
-    - git clone git@bitbucket.org:hotcario/engine.git
+    - git clone https://@bitbucket.org/hotcario/engine.git engine
   override:
     - mvn validate
 
