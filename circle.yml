@@ -25,4 +25,5 @@ test:
 deployment:
     production:
     branch: master
-        commands: aws --version
+      commands:
+        - aws --version
