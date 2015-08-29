@@ -11,6 +11,7 @@ machine:
 ## Customize dependencies
 dependencies:
   pre:
+    - sudo pip install awscli
     - git clone git@bitbucket.org:hotcario/engine.git
   override:
     - mvn --file engine validate
@@ -18,4 +19,10 @@ dependencies:
 ## Customize test commands
 test:
   override:
-    - mvn --file engine test
+    - mvn --file engine validate
+
+# Customize deployment
+deployment:
+    production:
+    branch: master
+        commands: aws --version
