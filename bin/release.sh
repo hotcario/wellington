@@ -5,5 +5,5 @@ FRONTEND_DIR=$SOURCE_DIR/frontend
 
 cd $FRONTEND_DIR
 npm install
-npm install --save jquery
+bower install
 ./release-production.sh
