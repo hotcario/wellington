@@ -12,18 +12,18 @@ machine:
 dependencies:
   pre:
     - sudo pip install awscli
-    - git clone git@bitbucket.org:hotcario/engine.git
+    - git clone git@bitbucket.org:hotcario/engine.git $SRC
   override:
-    - mvn --file engine validate
+    - mvn --file $SRC validate
 
 ## Customize test commands
 test:
   override:
-    - mvn --file engine validate
+    - mvn --file $SRC validate
 
 # Customize deployment
 deployment:
     production:
       branch: master
       commands:
-        - aws --version
+        - bin/release.sh
